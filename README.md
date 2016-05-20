@@ -1,7 +1,7 @@
 # str 
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/piniondb/store/master/LICENSE)
-[![GoDoc](https://godoc.org/github.com/piniondb/pinion/internal/str?status.svg)](https://godoc.org/github.com/piniondb/pinion/internal/str)
+[![GoDoc](https://godoc.org/github.com/piniondb/str?status.svg)](https://godoc.org/github.com/piniondb/str)
 [![Language](https://img.shields.io/badge/language-go-blue.svg)](https://golang.org/)
 
 Package str provides some routines to convert an unsigned integer value to its
