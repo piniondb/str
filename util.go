@@ -95,10 +95,10 @@ func quantityByte(buf *bytes.Buffer, val uint) {
 
 // QuantityEncode returns the English text equivalent, in byte-encoded form, of
 // the number specified by val. For example, if val is 21, the return value is
-// "twenty one". Sorting encoded values for various values produces the same
-// order as sorting decoded values. QuantityDecode() decodes the packed byte
-// sequence into English words. val must be a value less than or equal to
-// 999,999,999.
+// a compact byte slice that, when unencoded with QuantityDecode(), is "twenty
+// one". Sorting encoded values for various values produces the same order as
+// sorting decoded values. QuantityDecode() decodes the packed byte sequence
+// into English words. val must be a value less than or equal to 999,999,999.
 func QuantityEncode(val uint) (sl []byte, err error) {
 	const limit = 1000000000
 	if val < limit {
