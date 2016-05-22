@@ -6,11 +6,11 @@
 [![Language](https://img.shields.io/badge/language-go-blue.svg)](https://golang.org/)
 
 Package str provides some routines to convert an unsigned integer value to its
-English textual representation. This facilitates database testing by supporting
-the generation of a large number of records with generally unrelated sort
-orders.
+English textual representation and a generalized delimiting routine. These
+facilitate database testing by supporting the generation of a large number of
+records with generally unrelated sort orders.
 
 ##License
 
-store is released under the MIT License.
+str is released under the MIT License.
 
