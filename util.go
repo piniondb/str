@@ -1,6 +1,6 @@
 // Package str provides some routines to convert an unsigned integer value to
 // its English textual representation. This facilitates database testing by
-// supporting the generation of a large number of records with generally
+// supporting the generation of a large number of records with two generally
 // unrelated sort orders.
 package str
 

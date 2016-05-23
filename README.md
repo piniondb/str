@@ -8,7 +8,7 @@
 Package str provides some routines to convert an unsigned integer value to its
 English textual representation and a generalized delimiting routine. These
 facilitate database testing by supporting the generation of a large number of
-records with generally unrelated sort orders.
+records with two generally unrelated sort orders.
 
 ##License
 
