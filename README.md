@@ -27,7 +27,7 @@ The following complete program exemplifies the `str.Delimit()` and
     	f := func() string {
     		return str.Delimit(fmt.Sprintf("%d", val), ",", 3)
     	}
-    	for \_, val = range []uint{0, 5, 15, 121, 4320, 70123,
+    	for _, val = range []uint{0, 5, 15, 121, 4320, 70123,
     		999321, 4032500, 50100438, 100000054} {
     		fmt.Printf("[%14s : %s]\n", f(), str.Quantity(val))
     	}
