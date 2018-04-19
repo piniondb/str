@@ -15,23 +15,25 @@ records with two generally unrelated sort orders.
 The following complete program exemplifies the `str.Delimit()` and
 `str.Quantity()` functions.
 
-    package main
-    
-    import (
-    	"fmt"
-    	"github.com/piniondb/str"
-    )
-    
-    func main() {
-    	var val uint
-    	f := func() string {
-    		return str.Delimit(fmt.Sprintf("%d", val), ",", 3)
-    	}
-    	for _, val = range []uint{0, 5, 15, 121, 4320, 70123,
-    		999321, 4032500, 50100438, 100000054} {
-    		fmt.Printf("[%14s : %s]\n", f(), str.Quantity(val))
-    	}
+```go
+package main
+
+import (
+    "fmt"
+    "github.com/piniondb/str"
+)
+
+func main() {
+    var val uint
+    f := func() string {
+        return str.Delimit(fmt.Sprintf("%d", val), ",", 3)
     }
+    for _, val = range []uint{0, 5, 15, 121, 4320, 70123,
+        999321, 4032500, 50100438, 100000054} {
+        fmt.Printf("[%14s : %s]\n", f(), str.Quantity(val))
+    }
+}
+```
 
 The output from this program is the following.
 
@@ -49,4 +51,3 @@ The output from this program is the following.
 ## License
 
 str is released under the MIT License.
-
