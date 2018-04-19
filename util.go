@@ -10,6 +10,8 @@ import (
 	"strings"
 )
 
+const limit = 1000000000
+
 // Delimit converts 'ABCDEFG' to, for example, 'A,BCD,EFG'
 func Delimit(str string, sepstr string, sepcount int) string {
 	pos := len(str) - sepcount
@@ -100,7 +102,6 @@ func quantityByte(buf *bytes.Buffer, val uint) {
 // sorting decoded values. QuantityDecode() decodes the packed byte sequence
 // into English words. val must be a value less than or equal to 999,999,999.
 func QuantityEncode(val uint) (sl []byte, err error) {
-	const limit = 1000000000
 	if val < limit {
 		var buf bytes.Buffer
 		if val > 0 {
@@ -147,7 +148,7 @@ func quantity(buf *bytes.Buffer, val uint) {
 func Quantity(val uint) string {
 	if val == 0 {
 		return "zero"
-	} else if val >= 1000000000 {
+	} else if val >= limit {
 		return fmt.Sprintf("%d", val)
 	} else {
 		var buf bytes.Buffer
